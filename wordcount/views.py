@@ -1,7 +1,7 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
 def homepage(request):
-    return HttpResponse('Hello')
+    return render(request, 'home.html', {'hithere': 'This is me'})
 
-def eggs(request):
-    return HttpResponse('<h1>Eggs are great!</h1>')
+def count(request):
+    return render(request, 'count.html')
