@@ -9,6 +9,17 @@
 
 <body>
     <h1>This is the count page</h1>
+
+    <h2>There are {{ count }} words in your text</h2>
+
+    <h3>Your Text: </h3>
+    <p>{{ fulltext }}</p>
+
+    <h3>Word Count:</h3>
+    {% for word, counttotal in sortedWords %}
+    {{ word }} - {{ counttotal }}
+    <br />
+    {% endfor %}
 </body>
 
 </html>
